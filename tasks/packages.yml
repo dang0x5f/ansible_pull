@@ -1,0 +1,7 @@
+- name: Install packages
+  pkgng:
+    name:
+      # - htop
+      # - vim
+      - bsdinfo
+    state: present
