@@ -1,7 +1,120 @@
 - name: Install packages
   pkgng:
     name:
-      # - htop
-      # - vim
+      # - abiword
+      # - android-tools
+      # - ant-dracula-theme
+      # - arduino-bsd-mk
+      # - arduino18
+      # - autorandr
+      # - bhyve-firmware
       - bsdinfo
+      - calcurse
+      # - cdparanoia
+      # - cmake
+      # - compton
+      # - consolamono-ttf
+      # - debootstrap
+      # - dialog4ports
+      # - dnsmasq
+      # - drm-kmod
+      # - enscript-letter
+      # - evtest
+      # - filezilla
+      - firefox-esr
+      - font-awesome
+      # - fusefs-ext2
+      # - fusefs-ifuse
+      # - fusefs-jmtpfs
+      # - fusefs-ntfs
+      # - ganttproject
+      # - gcc-arm-embedded
+      # - gcr
+      # - gdb
+      - ghc92
+      # - gimp
+      # - git
+      # - go
+      # - grub2-bhyve
+      # - gtkpod
+      - hs-cabal-install
+      - hs-stack
+      - hs-xmobar
+      # - hs-xmonad
+      # - htop
+      # - icons-tango
+      # - kf5-breeze-icons
+      # - kid3-qt6
+      # - kxstitch
+      # - lf
+      # - libcdio
+      # - libiconv
+      # - libinotify
+      # - linux_libusb
+      - lua54
+      # - lxappearance
+      # - maim
+      # - mizuma
+      # - moc
+      # - mpv
+      # - mtpfs
+      - ncurses
+      # - neovim
+      - newsboat
+      # - nitrogen
+      # - nmap
+      # - nsxiv
+      # - oneko-sakura
+      # - openjdk11-jre
+      # - openjdk19
+      # - openjfx14
+      - pcmanfm
+      # - php83
+      - picom
+      # - pkg
+      - pkgconf
+      - plex-ttf
+      # - pstree
+      # - pwcview
+      - py39-ansible
+      # - py39-docutils
+      # - py39-tkinter
+      # - python
+      - qutebrowser
+      # - rsync
+      # - ruby
+      # - ruby27
+      # - rubygem-irb
+      # - rust
+      # - screenFetch
+      # - simplescreenrecorder
+      - sudo
+      # - tigervnc-viewer
+      - tree
+      # - universal-ctags
+      # - unoconv
+      # - v4l-utils
+      # - v4l-compat
+      # - valgrind
+      - vim-x11
+      # - vlc
+      # - vm-bhyve
+      # - vulkan-headers
+      # - wayland-protocols
+      # - webcamd
+      # - webkit2-gtk3
+      # - webkit2-gtk4
+      # - wget
+      # - wine-gecko
+      # - wine-mono
+      # - winetricks
+      - xbanish
+      - xclip
+      - xdg-utils
+      - xdotool
+      # - xf86-input-wacom
+      # - xneko
+      - xorg
+      # - zathura
+      # - zathura-pdf-mupdf
     state: present
