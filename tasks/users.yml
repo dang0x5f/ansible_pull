@@ -8,5 +8,5 @@
     src: files/sudoers_ansible
     dest: /usr/local/etc/sudoers.d/ansible
     owner: root
-    group: root
+    group: wheel
     mode: 0440
