@@ -71,7 +71,7 @@
       - pcmanfm
       # - php83
       - picom
-      # - pkg
+      - pkg
       - pkgconf
       - plex-ttf
       # - pstree
