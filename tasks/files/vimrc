@@ -147,7 +147,7 @@ Plug 'vimwiki/vimwiki'
 " Plug 'andlrc/rpgle.vim'
 " Plug 'junegunn/seoul256.vim'
 " Plug 'mswift42/vim-themes'
-Plug 'tpope/fugitive'
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 let g:gitgutter_grep=''
 set updatetime=100
