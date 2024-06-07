@@ -57,3 +57,6 @@
     owner: dang
     group: dang
     mode: 0644
+
+- name: Fixing vim directory ownership 
+  ansible.builtin.command: chown -R dang:dang /home/dang/.vim
