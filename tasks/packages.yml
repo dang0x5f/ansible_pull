@@ -40,7 +40,7 @@
       - hs-cabal-install
       - hs-stack
       - hs-xmobar
-      # - hs-xmonad
+      - hs-xmonad
       # - htop
       # - icons-tango
       # - kf5-breeze-icons
