@@ -10,7 +10,7 @@
 #     state: directory
 #     mode: '0755'
 - name: Setting up vim plugin manager
-  ansible.bultin.command: curl -fLo /home/dang/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  ansible.builtin.command: curl -fLo /home/dang/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 - name: Setting vimrc
   copy:
