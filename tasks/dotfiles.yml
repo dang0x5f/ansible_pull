@@ -1,3 +1,9 @@
+- name: Making ~/.vim directory
+  ansible.builtin.file:
+    path: /home/dang/.vim
+    state: directory
+    mode: '0755'
+
 - name: Setting vimrc
   copy:
     src: files/vimrc
