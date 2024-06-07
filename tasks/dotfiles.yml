@@ -1,7 +1,7 @@
 - name: Setting vimrc
   copy:
     src: files/vimrc
-    dest: /usr/home/dang/.vimrc 
+    dest: /home/dang/.vimrc 
     owner: dang
     group: dang
     mode: 0644
