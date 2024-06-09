@@ -10,15 +10,15 @@
 #     state: directory
 #     mode: '0755'
 - name: Setting up vim plugin manager
-  become_user: dang
   ansible.builtin.command: curl -fLo /home/dang/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  become_user: dang
 
 - name: Making vim colors directory
-  become_user: dang
   ansible.builtin.file:
     path: /home/dang/.vim/colors
     state: directory
     mode: '0755'
+  become_user: dang
 
 # - name: Adding dracula colorscheme
 #   copy:
