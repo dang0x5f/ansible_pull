@@ -1,14 +1,3 @@
-# - name: Making ~/.vim directory
-#   ansible.builtin.file:
-#     path: /home/dang/.vim
-#     state: directory
-#     mode: '0755'
-
-# - name: Making ~/.vim/autoload directory (plugin manager)
-#   ansible.builtin.file:
-#     path: /home/dang/.vim/autoload
-#     state: directory
-#     mode: '0755'
 - name: Setting up vim plugin manager
   ansible.builtin.command: curl -fLo /home/dang/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   become_user: dang
@@ -20,45 +9,48 @@
     mode: '0755'
   become_user: dang
 
-# - name: Adding dracula colorscheme
-#   copy:
-#     src: files/dracula.vim
-#     dest: /home/dang/.vim/colors/dracula.vim
-#     owner: dang
-#     group: dang
-#     mode: 0640
+- name: Making vim after directory
+  ansible.builtin.file:
+    path: /home/dang/.vim/after
+    state: directory
+    mode: '0755'
+  become_user: dang
 
-# - name: Adding seoul256-light colorscheme
-#   copy:
-#     src: files/seoul256-light.vim
-#     dest: /home/dang/.vim/colors/seoul256-light.vim
-#     owner: dang
-#     group: dang
-#     mode: 0640
+- name: Adding seoul256-light colorscheme
+  copy:
+    src: files/seoul256-light.vim
+    dest: /home/dang/.vim/colors/seoul256-light.vim
+    owner: dang
+    group: dang
+    mode: 0640
+  become_user: dang
 
-# - name: Adding seoul256 colorscheme
-#   copy:
-#     src: files/seoul256.vim
-#     dest: /home/dang/.vim/colors/seoul256.vim
-#     owner: dang
-#     group: dang
-#     mode: 0640
+- name: Adding seoul256 colorscheme
+  copy:
+    src: files/seoul256.vim
+    dest: /home/dang/.vim/colors/seoul256.vim
+    owner: dang
+    group: dang
+    mode: 0640
+  become_user: dang
 
-# - name: Adding solarized colorscheme
-#   copy:
-#     src: files/solarized.vim
-#     dest: /home/dang/.vim/colors/solarized.vim
-#     owner: dang
-#     group: dang
-#     mode: 0640
+- name: Adding solarized colorscheme
+  copy:
+    src: files/solarized.vim
+    dest: /home/dang/.vim/colors/solarized.vim
+    owner: dang
+    group: dang
+    mode: 0640
+  become_user: dang
 
-# - name: Setting vimrc
-#   copy:
-#     src: files/vimrc
-#     dest: /home/dang/.vimrc 
-#     owner: dang
-#     group: dang
-#     mode: 0644
+- name: Setting vimrc
+  copy:
+    src: files/vimrc
+    dest: /home/dang/.vimrc 
+    owner: dang
+    group: dang
+    mode: 0644
+  become_user: dang
 
 # - name: Fixing vim directory ownership 
 #   ansible.builtin.command: chown -R dang:dang /home/dang/.vim
