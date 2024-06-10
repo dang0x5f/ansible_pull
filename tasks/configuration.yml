@@ -2,59 +2,41 @@
   ansible.builtin.command: curl -fLo /home/dang/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   become_user: dang
 
-- name: Making vim colors directory
+- name: Making vim directory structure
   ansible.builtin.file:
-    path: /home/dang/.vim/colors
+    path: /home/dang/.vim/{{item}}
     state: directory
     mode: '0755'
+  with_items:
+    ['colors','after','after/syntax','after/ftplugin']
   become_user: dang
 
-- name: Making vim after directory
-  ansible.builtin.file:
-    path: /home/dang/.vim/after
-    state: directory
-    mode: '0755'
-  become_user: dang
-
-- name: Making vim after/syntax directory
-  ansible.builtin.file:
-    path: /home/dang/.vim/after/syntax
-    state: directory
-    mode: '0755'
-  become_user: dang
-
-- name: Making vim after/ftplugin directory
-  ansible.builtin.file:
-    path: /home/dang/.vim/after/ftplugin
-    state: directory
-    mode: '0755'
-  become_user: dang
-
-# - name: Adding Seoul256-light colorscheme
-#   copy:
-#     src: files/seoul256-light.vim
-#     dest: /home/dang/.vim/colors/seoul256-light.vim
-#     owner: dang
-#     group: dang
-#     mode: 0640
+# - name: Making vim colors directory
+#   ansible.builtin.file:
+#     path: /home/dang/.vim/colors
+#     state: directory
+#     mode: '0755'
 #   become_user: dang
 
-# - name: Adding Seoul256 colorscheme
-#   copy:
-#     src: files/seoul256.vim
-#     dest: /home/dang/.vim/colors/seoul256.vim
-#     owner: dang
-#     group: dang
-#     mode: 0640
+# - name: Making vim after directory
+#   ansible.builtin.file:
+#     path: /home/dang/.vim/after
+#     state: directory
+#     mode: '0755'
 #   become_user: dang
 
-# - name: Adding Solarized colorscheme
-#   copy:
-#     src: files/solarized.vim
-#     dest: /home/dang/.vim/colors/solarized.vim
-#     owner: dang
-#     group: dang
-#     mode: 0640
+# - name: Making vim after/syntax directory
+#   ansible.builtin.file:
+#     path: /home/dang/.vim/after/syntax
+#     state: directory
+#     mode: '0755'
+#   become_user: dang
+
+# - name: Making vim after/ftplugin directory
+#   ansible.builtin.file:
+#     path: /home/dang/.vim/after/ftplugin
+#     state: directory
+#     mode: '0755'
 #   become_user: dang
 
 - name: Adding vim colorschemes
