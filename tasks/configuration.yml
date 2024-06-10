@@ -55,7 +55,7 @@
 - name: Setting picom
   copy:
     src: files/picom
-    destination: /home/dang/.config/picom.conf
+    dest: /home/dang/.config/picom.conf
     owner: dang
     group: dang
     mode: 0644
