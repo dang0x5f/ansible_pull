@@ -43,6 +43,24 @@
     mode: 0640
   become_user: dang
 
+- name: Adding C syntax
+  copy:
+    src: files/c.vim
+    dest: /home/dang/.vim/after/syntax/c.vim
+    owner: dang
+    group: dang
+    mode: 0640
+  become_user: dang
+
+- name: Adding VimWiki syntax
+  copy:
+    src: files/vimwiki.vim
+    dest: /home/dang/.vim/after/ftplugin/vimwiki.vim
+    owner: dang
+    group: dang
+    mode: 0640
+  become_user: dang
+
 - name: Setting vimrc
   copy:
     src: files/vimrc
