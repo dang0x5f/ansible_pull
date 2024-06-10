@@ -16,7 +16,21 @@
     mode: '0755'
   become_user: dang
 
-- name: Adding seoul256-light colorscheme
+- name: Making vim after/syntax directory
+  ansible.builtin.file:
+    path: /home/dang/.vim/after/syntax
+    state: directory
+    mode: '0755'
+  become_user: dang
+
+- name: Making vim after/ftplugin directory
+  ansible.builtin.file:
+    path: /home/dang/.vim/after/ftplugin
+    state: directory
+    mode: '0755'
+  become_user: dang
+
+- name: Adding Seoul256-light colorscheme
   copy:
     src: files/seoul256-light.vim
     dest: /home/dang/.vim/colors/seoul256-light.vim
@@ -25,7 +39,7 @@
     mode: 0640
   become_user: dang
 
-- name: Adding seoul256 colorscheme
+- name: Adding Seoul256 colorscheme
   copy:
     src: files/seoul256.vim
     dest: /home/dang/.vim/colors/seoul256.vim
@@ -34,7 +48,7 @@
     mode: 0640
   become_user: dang
 
-- name: Adding solarized colorscheme
+- name: Adding Solarized colorscheme
   copy:
     src: files/solarized.vim
     dest: /home/dang/.vim/colors/solarized.vim
