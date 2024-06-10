@@ -30,34 +30,45 @@
     mode: '0755'
   become_user: dang
 
-- name: Adding Seoul256-light colorscheme
+# - name: Adding Seoul256-light colorscheme
+#   copy:
+#     src: files/seoul256-light.vim
+#     dest: /home/dang/.vim/colors/seoul256-light.vim
+#     owner: dang
+#     group: dang
+#     mode: 0640
+#   become_user: dang
+
+# - name: Adding Seoul256 colorscheme
+#   copy:
+#     src: files/seoul256.vim
+#     dest: /home/dang/.vim/colors/seoul256.vim
+#     owner: dang
+#     group: dang
+#     mode: 0640
+#   become_user: dang
+
+# - name: Adding Solarized colorscheme
+#   copy:
+#     src: files/solarized.vim
+#     dest: /home/dang/.vim/colors/solarized.vim
+#     owner: dang
+#     group: dang
+#     mode: 0640
+#   become_user: dang
+
+- name: Adding vim colorschemes
   copy:
-    src: files/seoul256-light.vim
-    dest: /home/dang/.vim/colors/seoul256-light.vim
+    src: files/{{item}}
+    dest: /home/dang/.vim/colors
     owner: dang
     group: dang
     mode: 0640
+  with_items:
+    ['solarized.vim','seoul256.vim','seoul256-light.vim']
   become_user: dang
 
-- name: Adding Seoul256 colorscheme
-  copy:
-    src: files/seoul256.vim
-    dest: /home/dang/.vim/colors/seoul256.vim
-    owner: dang
-    group: dang
-    mode: 0640
-  become_user: dang
-
-- name: Adding Solarized colorscheme
-  copy:
-    src: files/solarized.vim
-    dest: /home/dang/.vim/colors/solarized.vim
-    owner: dang
-    group: dang
-    mode: 0640
-  become_user: dang
-
-- name: Adding C syntax
+- name: Adding vim C syntax
   copy:
     src: files/c.vim
     dest: /home/dang/.vim/after/syntax/c.vim
@@ -66,7 +77,7 @@
     mode: 0640
   become_user: dang
 
-- name: Adding VimWiki syntax
+- name: Adding vim VimWiki syntax
   copy:
     src: files/vimwiki.vim
     dest: /home/dang/.vim/after/ftplugin/vimwiki.vim
