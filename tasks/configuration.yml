@@ -52,5 +52,11 @@
     mode: 0644
   become_user: dang
 
-# - name: Fixing vim directory ownership 
-#   ansible.builtin.command: chown -R dang:dang /home/dang/.vim
+- name: Setting picom
+  copy:
+    src: files/picom
+    destination: /home/dang/.config/picom.conf
+    owner: dang
+    group: dang
+    mode: 0644
+  become_user: dang
