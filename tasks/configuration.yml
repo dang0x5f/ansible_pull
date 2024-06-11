@@ -92,6 +92,13 @@
     mode: 0644
   become_user: dang
 
+- name: Change build-depends to include containers
+  lineinfile:
+    path: /home/dang/.xmonad/xmonad-config.cabal
+    regexp: 'build-depends'
+    line: '  build-depends: base, xmonad, xmonad-contrib, containers'
+  become_user: dang
+
 - name: Setting shrc
   copy:
     src: files/shrc
