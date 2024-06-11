@@ -3,7 +3,7 @@
   become: true
 
   tasks:
-    - include: tasks/packages.yml
-    - include: tasks/configuration.yml
     - include: tasks/users.yml
     - include: tasks/cron.yml
+    - include: tasks/packages.yml
+    - include: tasks/configuration.yml

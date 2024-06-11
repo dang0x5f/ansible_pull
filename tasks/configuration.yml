@@ -49,10 +49,80 @@
     mode: 0644
   become_user: dang
 
+- name: Making xmonad directory
+  ansible.builtin.file:
+    path: /home/dang/.xmonad
+    state: directory
+    mode: '0755'
+  become_user: dang
+
+- name: Setting xmonad config
+  copy:
+    src: files/xmonad
+    dest: /home/dang/.xmonad/config.hs
+    owner: dang
+    group: dang
+    mode: 0644
+  become_user: dang
+
+- name: Setting xmonadctl source
+  copy:
+    src: files/xmonadctl
+    dest: /home/dang/.xmonad/xmonadctl.hs
+    owner: dang
+    group: dang
+    mode: 0644
+  become_user: dang
+
+- name: Copying Cabal build script
+  copy:
+    src: /usr/local/share/examples/xmonad/build
+    dest: /home/dang/.xmonad/build
+    owner: dang
+    group: dang
+    mode: 0555
+  become_user: dang
+
+- name: Copying Cabal xmonad config 
+  copy:
+    src: /usr/local/share/examples/xmonad/xmonad-config.cabal
+    dest: /home/dang/.xmonad/xmonad-config.cabal
+    owner: dang
+    group: dang
+    mode: 0644
+  become_user: dang
+
+- name: Setting shrc
+  copy:
+    src: files/shrc
+    dest: /home/dang/.shrc
+    owner: dang
+    group: dang
+    mode: 0644
+  become_user: dang
+
+- name: Setting gitconfig
+  copy:
+    src: files/gitconfig
+    dest: /home/dang/.gitconfig
+    owner: dang
+    group: dang
+    mode: 0644
+  become_user: dang
+
 - name: Setting picom
   copy:
     src: files/picom
     dest: /home/dang/.config/picom.conf
+    owner: dang
+    group: dang
+    mode: 0644
+  become_user: dang
+
+- name: Setting Xresources
+  copy:
+    src: files/xresources
+    dest: /home/dang/.Xresources
     owner: dang
     group: dang
     mode: 0644

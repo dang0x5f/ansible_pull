@@ -1,7 +1,7 @@
 - name: Install packages
   pkgng:
     name:
-      # - abiword
+      - abiword
       # - android-tools
       # - ant-dracula-theme
       - arduino-core
@@ -40,7 +40,7 @@
       # - git
       # - go
       # - grub2-bhyve
-      # - gtkpod
+      - gtkpod
       - hs-cabal-install
       - hs-stack
       - hs-xmobar
@@ -55,6 +55,7 @@
       # - libiconv
       # - libinotify
       # - linux_libusb
+      - love
       - lua54
       # - lxappearance
       # - maim
@@ -85,7 +86,7 @@
       # - py39-tkinter
       # - python
       - qutebrowser
-      # - rsync
+      - rsync
       - ruby
       # - ruby27
       - rubygem-irb
