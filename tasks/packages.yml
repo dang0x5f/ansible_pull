@@ -4,22 +4,26 @@
       # - abiword
       # - android-tools
       # - ant-dracula-theme
-      # - arduino-bsd-mk
+      - arduino-core
+      - arduino-bsd-mk
       # - arduino18
+      - avr-gcc
+      - avr-libc
+      - avrdude
       # - autorandr
       # - bhyve-firmware
-      - bsdinfo
+      # - bsdinfo
       - calcurse
-      # - cdparanoia
+      - cdparanoia
       # - cmake
       # - compton
       # - consolamono-ttf
       # - debootstrap
       # - dialog4ports
       # - dnsmasq
-      # - drm-kmod
-      # - enscript-letter
-      # - evtest
+      - drm-kmod
+      - enscript-letter
+      - evtest
       # - filezilla
       - firefox-esr
       - font-awesome
@@ -30,9 +34,9 @@
       # - ganttproject
       # - gcc-arm-embedded
       # - gcr
-      # - gdb
+      - gdb
       - ghc92
-      # - gimp
+      - gimp
       # - git
       # - go
       # - grub2-bhyve
@@ -46,8 +50,8 @@
       # - kf5-breeze-icons
       # - kid3-qt6
       # - kxstitch
-      # - lf
-      # - libcdio
+      - lf
+      - libcdio
       # - libiconv
       # - libinotify
       # - linux_libusb
@@ -55,19 +59,19 @@
       # - lxappearance
       # - maim
       # - mizuma
-      # - moc
-      # - mpv
+      - moc
+      - mpv
       # - mtpfs
       - ncurses
       # - neovim
       - newsboat
-      # - nitrogen
+      - nitrogen
       # - nmap
-      # - nsxiv
+      - nsxiv
       # - oneko-sakura
-      # - openjdk11-jre
-      # - openjdk19
-      # - openjfx14
+      - openjdk11-jre
+      - openjdk19
+      - openjfx14
       - pcmanfm
       # - php83
       - picom
@@ -82,20 +86,21 @@
       # - python
       - qutebrowser
       # - rsync
-      # - ruby
+      - ruby
       # - ruby27
-      # - rubygem-irb
+      - rubygem-irb
       # - rust
       # - screenFetch
-      # - simplescreenrecorder
+      - simplescreenrecorder
       - sudo
       # - tigervnc-viewer
       - tree
-      # - universal-ctags
+      - uarduno
+      - universal-ctags
       # - unoconv
       # - v4l-utils
       # - v4l-compat
-      # - valgrind
+      - valgrind
       - vim-x11
       # - vlc
       # - vm-bhyve
@@ -112,9 +117,9 @@
       - xclip
       - xdg-utils
       - xdotool
-      # - xf86-input-wacom
+      - xf86-input-wacom
       # - xneko
       - xorg
-      # - zathura
-      # - zathura-pdf-mupdf
+      - zathura
+      - zathura-pdf-mupdf
     state: present

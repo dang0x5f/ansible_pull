@@ -11,34 +11,6 @@
     ['colors','after','after/syntax','after/ftplugin']
   become_user: dang
 
-# - name: Making vim colors directory
-#   ansible.builtin.file:
-#     path: /home/dang/.vim/colors
-#     state: directory
-#     mode: '0755'
-#   become_user: dang
-
-# - name: Making vim after directory
-#   ansible.builtin.file:
-#     path: /home/dang/.vim/after
-#     state: directory
-#     mode: '0755'
-#   become_user: dang
-
-# - name: Making vim after/syntax directory
-#   ansible.builtin.file:
-#     path: /home/dang/.vim/after/syntax
-#     state: directory
-#     mode: '0755'
-#   become_user: dang
-
-# - name: Making vim after/ftplugin directory
-#   ansible.builtin.file:
-#     path: /home/dang/.vim/after/ftplugin
-#     state: directory
-#     mode: '0755'
-#   become_user: dang
-
 - name: Adding vim colorschemes
   copy:
     src: files/{{item}}
