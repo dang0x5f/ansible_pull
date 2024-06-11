@@ -3,7 +3,7 @@
   become_user: dang
 
 - name: Making vim directory structure
-  ansible.builtin.file:
+  file:
     path: /home/dang/.vim/{{item}}
     state: directory
     mode: '0755'
