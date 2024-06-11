@@ -8,7 +8,7 @@
     state: directory
     mode: '0755'
   with_items:
-    ['colors','after','after/syntax','after/ftplugin']
+    ['colors','after','after/syntax','after/ftplugin','.vimwiki']
   become_user: dang
 
 - name: Adding vim colorschemes
