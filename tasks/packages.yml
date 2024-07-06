@@ -21,7 +21,7 @@
       # - debootstrap
       # - dialog4ports
       # - dnsmasq
-      - drm-kmod
+      # - drm-kmod
       - enscript-letter
       - evtest
       # - filezilla
@@ -69,6 +69,8 @@
       - nitrogen
       # - nmap
       - nsxiv
+      - nvidia-driver
+      - nvidia-settings
       # - oneko-sakura
       - openjdk11-jre
       - openjdk19
@@ -81,7 +83,7 @@
       - plex-ttf
       # - pstree
       # - pwcview
-      - py39-ansible
+      # - py39-ansible
       # - py39-docutils
       # - py39-tkinter
       # - python

@@ -1,0 +1,7 @@
+xbanish &
+xsetroot -cursor_name left_ptr
+picom &
+nitrogren --restore &
+xrdb $HOME/.Xresources
+setxkbmap -option ctrl:nocaps -option terminate:ctrl_alt_bksp
+exec $HOME/.xmonad/xmonad-x86_64-freebsd

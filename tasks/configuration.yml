@@ -56,6 +56,20 @@
     mode: '0755'
   become_user: dang
 
+- name: Making config directory
+  ansible.builtin.file:
+    path: /home/dang/.config
+    state: directory
+    mode: '0755'
+  become_user: dang
+
+- name: Making xmobar directory
+  ansible.builtin.file:
+    path: /home/dang/.config/xmobar
+    state: directory
+    mode: '0755'
+  become_user: dang
+
 - name: Setting xmonad config
   copy:
     src: files/xmonad
@@ -126,6 +140,15 @@
     mode: 0644
   become_user: dang
 
+- name: Setting xinitrc
+  copy:
+    src: files/xinitrc
+    dest: /home/dang/.xinitrc
+    owner: dang
+    group: dang
+    mode: 0644
+  become_user: dang
+
 - name: Setting Xresources
   copy:
     src: files/xresources
@@ -134,3 +157,11 @@
     group: dang
     mode: 0644
   become_user: dang
+
+- name: Setting X11 nvidia-driver file
+  copy:
+    src: files/nvidia-driver.conf
+    dest: /usr/local/etc/X11/xorg.conf.d/nvidia-driver.conf
+    owner: root
+    group: wheel
+    mode: 0440
