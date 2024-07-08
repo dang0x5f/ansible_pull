@@ -160,8 +160,8 @@
 
 - name: Setting X11 nvidia-driver file
   copy:
-    src: files/nvidia-driver.conf
-    dest: /usr/local/etc/X11/xorg.conf.d/nvidia-driver.conf
+    src: files/driver-nvidia.conf
+    dest: /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf
     owner: root
     group: wheel
     mode: 0440
