@@ -168,6 +168,6 @@
 
 - name: Adding user scripts
   copy:
-    src: scripts
-    dest: /home/dang/.local/bin
+    src: bin
+    dest: /home/dang/.local
   become_user: dang
