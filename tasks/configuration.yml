@@ -165,3 +165,9 @@
     owner: root
     group: wheel
     mode: 0440
+
+- name: Adding user scripts
+  copy:
+    src: scripts
+    dest: /home/dang/.local/bin
+  become_user: dang
