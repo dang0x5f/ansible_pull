@@ -11,7 +11,7 @@ $HOME = "/home/" + Etc.getlogin + "/"
 $REPO = $HOME + "code/repo/ansible_pull/tasks/files/"
 
 $BIN = $HOME + "/.local/bin/"
-$REPO2 = $HOME + "code/repo/ansible_pull/tasks/scripts/"
+$REPO2 = $HOME + "code/repo/ansible_pull/tasks/bin/"
 $SHELL = ".sh"
 $RUBY  = ".rb"
 
