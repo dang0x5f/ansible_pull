@@ -171,3 +171,21 @@
     src: bin
     dest: /home/dang/.local
   become_user: dang
+
+- name: Making START_HERE directory
+  ansible.builtin.file:
+    path: /home/dang/START_HERE
+    state: directory
+    mode: '0755'
+  become_user: dang
+
+- name: Adding vim colorschemes
+  copy:
+    src: files/{{item}}
+    dest: /home/dang/START_HERE
+    owner: dang
+    group: dang
+    mode: 0640
+  with_items:
+    ['READFIRST.md','init.sh','config.py','xmobarrc-cowabunga']
+  become_user: dang
